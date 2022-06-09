@@ -10,6 +10,14 @@
 .navBrand {
   font-size: 1.25rem;
 }
+
+.navBrand a span {
+  color: var(--color-main);
+}
+
+.navBrand a:hover {
+  filter: brightness(70%);
+}
 .navItems {
   margin-left: auto;
   display: flex;

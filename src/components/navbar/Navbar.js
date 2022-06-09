@@ -4,7 +4,11 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <h1 className={styles.navbrand}>JWT Tutorial</h1>
+        <h1 className={styles.navbrand}>
+          <a href="#">
+            <span>JWT</span> Tutorial
+          </a>
+        </h1>
         <ul className={styles.navItems}>
           <li>
             <a href="#" className={styles.navLink}>

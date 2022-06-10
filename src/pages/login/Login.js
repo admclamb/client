@@ -1,32 +1,26 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Form from '../../components/form/Form';
-import { registerUser } from '../../utils/api';
-import styles from './Signup.module.css';
-const Signup = () => {
+import { loginUser } from '../../utils/api';
+import styles from './Login.module.css';
+
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordConfirm, setPasswordConfirm] = useState('');
   const [errors, setErrors] = useState([]);
-  const navigate = useNavigate();
-  const createUser = async (event) => {
+  const login = async (event) => {
     event.preventDefault();
     setErrors([]);
     try {
-      if (password !== passwordConfirm) {
-        setErrors((curr) => [...curr, 'Passwords do not match']);
-        return;
-      }
-      const response = await registerUser({ username, password });
-      navigate('/');
+      const response = await loginUser({ username, password });
     } catch (error) {
       setErrors((curr) => [...curr, error]);
     }
   };
   return (
     <section className={styles.container}>
-      <h2>Welcome to JWT Tutorial</h2>
-      <Form submitFunction={createUser} errors={errors}>
+      <h2>Welcome back to JWT Tutorial</h2>
+      <Form submitFunction={login} errors={errors}>
         <div>
           <label htmlFor="username">Username</label>
           <input
@@ -48,20 +42,10 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="passwordConfirm">Confirm Password</label>
-          <input
-            id="passwordConfirm"
-            type="passwordConfirm"
-            value={passwordConfirm}
-            placeholder="Confirm Password"
-            onChange={({ target }) => setPasswordConfirm(target.value)}
-          />
-        </div>
-        <div>
           <p>
-            Already have an account?{' '}
-            <Link to="/login" className={styles.link}>
-              Login here
+            Dont have an account?
+            <Link to="/signup" className={styles.link}>
+              Signup here
             </Link>
           </p>
         </div>
@@ -70,4 +54,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

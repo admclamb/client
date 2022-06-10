@@ -1,0 +1,29 @@
+.headerLine {
+  width: 30%;
+}
+.dateLine {
+  width: 10%;
+  margin-bottom: 2rem;
+}
+
+.line1 {
+  width: 80%;
+}
+
+.line2 {
+  width: 90%;
+}
+
+.line3 {
+  width: 75%;
+}
+
+.bar {
+  height: 0.5em;
+  border-radius: 10rem;
+  background-color: var(--color-lightest);
+}
+
+.bar:not(:last-child) {
+  margin-bottom: 1rem;
+}

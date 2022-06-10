@@ -1,0 +1,8 @@
+.container {
+  margin-inline: 25%;
+  margin-top: 4rem;
+}
+
+.container article:not(:last-child) {
+  margin-bottom: var(--gutter-y);
+}

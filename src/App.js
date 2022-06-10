@@ -1,4 +1,5 @@
 import Navbar from './components/navbar/Navbar';
+import PageRoutes from './pages/PageRoutes';
 
 function App() {
   return (
@@ -6,7 +7,9 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <main></main>
+      <main>
+        <PageRoutes />
+      </main>
     </>
   );
 }

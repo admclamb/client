@@ -10,12 +10,16 @@
   --color-main: #d9ed92;
 
   --color-sec: #52b69a;
+  --color-sec-lighter: #8bcebb;
   --color-sec-darker: #34a0a4;
   --color-sec-darkest: #27787a;
   --color-darkest: rgb(22, 24, 29);
   --color-darker: #242830;
   --color-dark: #282c34;
   --color-light: #fff;
+  --color-gray: rgb(219, 219, 219);
+  --color-lightest: rgb(233, 233, 233);
+  --gutter-y: 1.4rem;
 }
 
 body {

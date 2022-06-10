@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--color-sec-lighter);
+  border: solid 1px var(--color-sec);
+  padding: 0.6em 1.2em;
+  margin-bottom: var(--gutter-y);
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin-left: auto;
+  border: none;
+  background-color: inherit;
+  padding: 0.4em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-sec-darker);
+}

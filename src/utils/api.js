@@ -14,3 +14,5 @@ export async function readPosts() {
     return Promise.resolve([]);
   }
 }
+
+export async function registerUser() {}

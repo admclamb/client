@@ -1,7 +1,7 @@
 import Home from './home/Home';
 import Login from './Login';
-import Signup from './Signup';
-import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import Signup from './signup/Signup';
+import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 
 const PageRoutes = () => {

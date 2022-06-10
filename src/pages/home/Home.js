@@ -17,7 +17,7 @@ const Home = () => {
         const response = await readPosts();
         setPosts(response);
       } catch (error) {
-        errors.push(error);
+        setErrors((curr) => [...curr, error]);
       }
     };
     getPosts();
